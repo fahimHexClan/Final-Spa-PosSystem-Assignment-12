@@ -1,0 +1,357 @@
+<!--
+Project: Pos System
+Author: Nimna Kaveesha Sekara
+License: MIT (See the LICENSE file for details)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pos System</title>
+  <meta name="viewport" content="height=device-height,width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="assets/bootstrap-5.3.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/navBarStyle.css">
+  <link rel="stylesheet" href="assets/css/normalize_css.css">
+  <link rel="stylesheet" href="assets/css/formStyle.css">
+  <link rel="stylesheet" href="assets/css/orderDetailsStyles.css">
+  <link rel="stylesheet" href="assets/css/preLoader_style.css">
+
+  <style>
+    body {
+      background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("assets/img/pos1.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+
+
+</head>
+<body>
+
+<nav id="navBar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a id="samplePos" class="navbar-brand gradient-text" href="#">Nesta POS System</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menuBar">
+        <li class="nav-item">
+          <a class="nav-link active gradient-text" id="home_page" aria-current="page" href="#Home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link gradient-text" id="customer_page" href="#Customer">Customer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link gradient-text" id="item_page" href="#Item">Item</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link gradient-text" id="order_page" href="#Order">Order</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link gradient-text" id="order_details_page" href="#orderDetails">Order Details</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input id="searchField" class="form-control me-2" type="search" placeholder="Search Text Here" aria-label="Search">
+        <button id="search" class="btn btn-outline-success gradient-text" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div id="preloader">
+  <div id="preloader-over-layer"></div>
+  <svg style="left: 50%;
+        top: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%) matrix(1, 0, 0, 1, 0, 0);" preserveAspectRatio="xMidYMid meet"
+       viewBox="0 0 187.3 93.7" height="300px" width="400px">
+    <path d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 				c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z"
+          stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="4" fill="none"
+          id="outline" stroke="#4E4FEB"></path>
+    <path d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 				c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z"
+          stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="4" stroke="#4E4FEB"
+          fill="none" opacity="0.05" id="outline-bg"></path>
+  </svg>
+</div>
+<div class="container">
+<main id="Home" >
+  <div class="row justify-content-center align-items-center" style="height: 100vh;">
+    <div class="col-md-6 text-center">
+      <h1 class="text-light display-1">Nesta POS System</h1>
+      <p class="text-light">A POS system website helps businesses manage sales, process transactions, track inventory, and improve efficiency.</p>
+      <div>
+        <button type="button" class="btn btn-outline-primary">Watch</button>
+        <button type="button" class="btn btn-outline-secondary">Subs</button>
+      </div>
+    </div>
+    </div>
+</main>
+</div>
+
+<main id="Customer">
+  <section>
+    <div class="container form">
+      <div class="row">
+        <div class="text-center text-light">
+          <h3  >Customer Details Form</h3>
+        </div>
+        <div class="col">
+          <form class="form_input">
+            <div class="mb-3">
+              <label for="customer_id" class="text-light">Customer Id</label>
+              <input type="text" class="form-control" id="customer_id" placeholder="Customer Id Here">
+            </div>
+            <div class="mb-3">
+              <label for="customer_name" class="text-light">Customer Name</label>
+              <input type="text" class="form-control" id="customer_name" placeholder="Customer Name Here">
+            </div>
+            <div class="mb-3">
+              <label for="address" class="text-light">Address</label>
+              <textarea class="form-control" id="address" rows="1" placeholder="Address Here"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="contact" class="text-light">Contact</label>
+              <input type="tel" class="form-control" id="contact" placeholder="Contact Here">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="text-light">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Email Here">
+            </div>
+            <div class="mt-1 button">
+              <button id="submitBtn" type="submit" class="btn btn-success">Submit</button>
+              <button id="updateBtn" type="button" class="btn btn-primary">Update</button>
+              <button type="button" class="btn btn-danger">Delete</button>
+              <button type="reset" class="btn btn-warning">Reset</button>
+            </div>
+          </form>
+        </div>
+        <div class=" mt-5">
+          <table class="table table-bordered table-hover" id="customerTable">
+            <thead class="table-dark">
+            <tr>
+              <th scope="col">Customer Id</th>
+              <th scope="col">Customer Name</th>
+              <th scope="col">Address</th>
+              <th scope="col">Contact</th>
+              <th scope="col">Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<main id="Item">
+  <section>
+    <div class="container form">
+      <div class="row">
+        <div class=" text-center text-light">
+          <h3>Item Details Form</h3>
+        </div>
+        <div class="col">
+          <form id="form_input">
+            <div class="mb-3">
+              <label for="item_code" class="text-light">Item code</label>
+              <input type="text" class="form-control" id="item_code" placeholder="Item Code Here" disabled>
+            </div>
+            <div class="mb-3">
+              <label for="item_name" class="text-light">Item Name</label>
+              <input type="text" class="form-control" id="item_name" placeholder="Item Name Here">
+            </div>
+            <div class="mb-3">
+              <label for="price" class="text-light">Price</label>
+              <input type="number" class="form-control" id="price" placeholder="Price Here">
+            </div>
+            <div class="mb-3">
+              <label for="QtyOnHand" class="text-light">Qty on hand</label>
+              <input type="number" class="form-control" id="QtyOnHand" placeholder="Qty On Hand Here">
+            </div>
+            <div class="mt-1 button">
+              <button id="submitBtn1" type="submit" class="btn btn-success">Submit</button>
+              <button id="updateBtn1" type="button" class="btn btn-primary">Update</button>
+              <button type="button" class="btn btn-danger">Delete</button>
+              <button type="reset" class="btn btn-warning">Reset</button>
+            </div>
+          </form>
+        </div>
+        <div class="mt-5">
+          <table class="table table-bordered table-hover" id="itemTable">
+            <thead class="table-dark">
+            <tr>
+              <th scope="col">Item Code</th>
+              <th scope="col">Item Name</th>
+              <th scope="col">Price Per Kg</th>
+              <th scope="col">Qty On Hand</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<main id="Order">
+  <section>
+    <div class="container mb-5">
+      <div class="row">
+        <div class="col-md-6 mt-3">
+          <div class="card bg-dark  text-white" id="invoiceDetails">
+            <div class="card-header text-center gradient-text">
+              Invoice Details
+            </div>
+            <div class="mb-3 col-md-11 mt-3">
+              <label for="order_date" class="form-label">Order Date</label>
+              <input type="date" class="form-control" id="order_date" placeholder="Order Date Here" disabled>
+            </div>
+            <div class="mb-3 col-md-11">
+              <label for="order_id" class="form-label">Order Id</label>
+              <input type="text" class="form-control" id="order_id" placeholder="Order Id Here" disabled>
+            </div>
+            <div class="mb-3 col-md-11">
+              <label for="customer_id1" class="form-label">Customer Id</label>
+              <select class="form-select" aria-label="Disabled select example" id="customer_id1">
+                <option selected>Select Customer Id</option>
+              </select>
+            </div>
+            <div class="mb-3 col-md-11">
+              <label for="customer_name1" class="form-label">Customer Name</label>
+              <input type="text" class="form-control" id="customer_name1" placeholder="Customer Name Here" disabled>
+            </div>
+            <div class="mb-3 col-md-11">
+              <label for="total" class="form-label">Total</label>
+              <input type="number" class="form-control" id="total" placeholder="Total Here" disabled>
+            </div>
+            <div class="mb-3 col-md-11">
+              <label for="discount" class="form-label">Discount</label>
+              <input type="number" class="form-control" id="discount" placeholder="Discount in percentage Here">
+            </div>
+            <div class="mb-3 col-md-11">
+              <label for="sub_total" class="form-label">Sub Total</label>
+              <input type="number" class="form-control" id="sub_total" placeholder="Sub Total Here" disabled>
+            </div>
+            <div class="mb-3 col-md-11">
+              <label for="Cash" class="form-label">Cash</label>
+              <input type="number" class="form-control" id="Cash" placeholder="Cash Here">
+            </div>
+            <div class="mb-3 col-md-11">
+              <label for="balance" class="form-label">Balance</label>
+              <input type="number" class="form-control" id="balance" placeholder="Balance Here" disabled>
+            </div>
+            <div class="mt-1 mb-3" id="button">
+              <button id="submitBtn2" type="submit" class="btn btn-success">Purchase</button>
+              <button id="updateBtn2" type="button" class="btn btn-primary">Update</button>
+              <button id="deleteBtn2" type="button" class="btn btn-danger">Delete</button>
+              <button id="resetBtn2" type="reset" class="btn btn-warning">Reset</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mt-3">
+          <div class="card bg-dark  text-white" id="orderDetails1">
+            <div class="card-header text-center gradient-text">
+              Order Details
+            </div>
+            <div class="m-3 col-md-11">
+              <label for="item_code1" class="form-label">Item Code</label>
+              <select class="form-select" aria-label="Disabled select example" id="item_code1">
+                <option selected>Select Item Code</option>
+              </select>
+            </div>
+            <div class="m-3 col-md-11">
+              <label for="item_name1" class="form-label">Item Name</label>
+              <input type="text" class="form-control" id="item_name1" placeholder="Item Name Here" disabled>
+            </div>
+            <div class="m-3 col-md-11">
+              <label for="price1" class="form-label">Price</label>
+              <input type="number" class="form-control" id="price1" placeholder="Price Here" disabled>
+            </div>
+            <div class="m-3 col-md-11">
+              <label for="qty_on_hand" class="form-label">Qty on Hand</label>
+              <input type="number" class="form-control" id="qty_on_hand" placeholder="Qty on hand Here" disabled>
+            </div>
+            <div class="m-3 col-md-11">
+              <label for="getQty" class="form-label">Getting Qty</label>
+              <input type="number" class="form-control" id="getQty" placeholder="Qty Here">
+            </div>
+            <div class="m-3" id="button1">
+              <button id="addBtn" type="submit" class="btn btn-success">Add</button>
+              <button id="UpdateBtn3" type="button" class="btn btn-primary">Update</button>
+              <button id="removeBtn" type="button" class="btn btn-danger">Remove</button>
+              <button id="resetItemDetailsBtn" type="reset" class="btn btn-warning">Reset</button>
+            </div>
+            <div class="col m-3">
+              <table class="table table-bordered table-hover" id="item-order-table">
+                <thead class="table-primary">
+                <tr>
+                  <th scope="col">Item Code</th>
+                  <th scope="col">Item Name</th>
+                  <th scope="col">Price Per Kg</th>
+                  <th scope="col">Qty On Hand</th>
+                  <th scope="col">Qty</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<main id="orderDetails">
+  <section>
+    <div id="form">
+      <div class=" text-center text-light">
+        <h3>Order Details Form</h3>
+      </div>
+
+      <div class="col table1">
+        <table class="table" id="item-details-table">
+          <thead class="table-primary">
+          <tr>
+            <th scope="col">Order Id</th>
+            <th scope="col">Order Date</th>
+            <th scope="col">Customer Id</th>
+            <th scope="col">Total</th>
+            <th scope="col">Discount</th>
+            <th scope="col">Sub Total</th>
+            <th scope="col">Cash</th>
+            <th scope="col">Balance</th>
+          </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="assets/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
+<script src="script/jquery.min.js"></script>
+<script src="script/homeScript.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script type="module" src="controller/customerController.js"></script>
+<script type="module" src="controller/itemController.js"></script>
+<script type="module" src="controller/orderController.js"></script>
+<script type="module" src="controller/orderDetailsController.js"></script>
+
+</body>
+</html>
