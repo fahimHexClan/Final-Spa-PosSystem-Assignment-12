@@ -1,11 +1,3 @@
-/*
-
-Project: Pos System
-Author: Nimna Kaveesha Sekara
-License: MIT (See the LICENSE file for details)
-
-*/
-
 const loadingScreen = document.querySelector('#Home');
 const loadingScreen1 = document.querySelector('#Customer');
 const loadingScreen2 = document.querySelector('#Item');
